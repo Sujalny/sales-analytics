@@ -1,0 +1,15 @@
+{
+  "name": "Meridian Midnight",
+  "dataColors": ["#74D6B1", "#7F9CC8", "#B6A0CE", "#D2AC73", "#DF929B", "#86BFCB"],
+  "background": "#151B23",
+  "foreground": "#E9EDF3",
+  "tableAccent": "#74D6B1",
+  "visualStyles": {
+    "*": {"*": {
+      "background": [{"color": {"solid": {"color": "#151B23"}}, "transparency": 0}],
+      "title": [{"color": {"solid": {"color": "#E9EDF3"}}, "fontFamily": "Segoe UI", "fontSize": 12}],
+      "border": [{"show": true, "color": {"solid": {"color": "#28313C"}}, "radius": 10}]
+    }},
+    "page": {"*": {"background": [{"color": {"solid": {"color": "#0D1117"}}, "transparency": 0}]}}
+  }
+}
