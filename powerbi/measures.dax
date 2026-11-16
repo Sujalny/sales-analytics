@@ -1,0 +1,39 @@
+// Create each measure separately on fact_sales. Format currency as USD.
+Revenue = SUM(fact_sales[net_sales])
+
+Gross Profit = SUM(fact_sales[profit])
+
+Gross Margin = DIVIDE([Gross Profit], [Revenue])
+
+Orders = DISTINCTCOUNT(fact_sales[order_id])
+
+Units = SUM(fact_sales[quantity])
+
+Customers = DISTINCTCOUNT(fact_sales[customer_id])
+
+Average Order Value = DIVIDE([Revenue], [Orders])
+
+Revenue LY = CALCULATE([Revenue], SAMEPERIODLASTYEAR(dim_date[date]))
+
+Revenue YoY % = DIVIDE([Revenue] - [Revenue LY], [Revenue LY])
+
+Revenue YTD = TOTALYTD([Revenue], dim_date[date])
+
+Category Share = DIVIDE([Revenue], CALCULATE([Revenue], ALLSELECTED(dim_product[category])))
+
+Product Rank = RANKX(ALLSELECTED(dim_product[product_name]), [Revenue], , DESC, DENSE)
+
+// Additional detail measures. Repeat customers counts within the current filter context.
+Gross Profit LY = CALCULATE([Gross Profit], SAMEPERIODLASTYEAR(dim_date[date]))
+
+Gross Profit YoY % = DIVIDE([Gross Profit] - [Gross Profit LY], [Gross Profit LY])
+
+Gross Margin LY = CALCULATE([Gross Margin], SAMEPERIODLASTYEAR(dim_date[date]))
+
+Gross Margin Change pp = ([Gross Margin] - [Gross Margin LY]) * 100
+
+Revenue per Customer = DIVIDE([Revenue], [Customers])
+
+Repeat Customers = COUNTROWS(FILTER(VALUES(fact_sales[customer_id]), CALCULATE(DISTINCTCOUNT(fact_sales[order_id])) >= 2))
+
+Repeat Buyer Share = DIVIDE([Repeat Customers], [Customers])
