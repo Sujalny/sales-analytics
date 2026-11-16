@@ -1,0 +1,7 @@
+{
+  "name": "Meridian Sales",
+  "dataColors": ["#249C88", "#102539", "#7594AD", "#E6AF55", "#6A72B8", "#CB7584"],
+  "background": "#F3F5F9",
+  "foreground": "#233044",
+  "tableAccent": "#249C88"
+}
