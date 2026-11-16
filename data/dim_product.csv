@@ -1,0 +1,13 @@
+product_id,product_name,category,unit_price,unit_cost
+"P01","Studio Headphones","Electronics","149","83"
+"P02","Wireless Keyboard","Electronics","79","39"
+"P03","4K Monitor","Electronics","349","245"
+"P04","Ergonomic Chair","Furniture","299","178"
+"P05","Standing Desk","Furniture","549","345"
+"P06","Desk Lamp","Furniture","59","29"
+"P07","Notebook Set","Office Supplies","24","9"
+"P08","Pen Collection","Office Supplies","19","6"
+"P09","Travel Backpack","Accessories","89","42"
+"P10","Laptop Sleeve","Accessories","39","16"
+"P11","USB-C Hub","Electronics","69","31"
+"P12","Desk Organizer","Office Supplies","34","13"

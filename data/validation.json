@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "period": "2024-01-01 to 2025-12-31",
+  "lines": 21027,
+  "orders": 10453,
+  "revenue": 8674373.9,
+  "profit": 3236757.9,
+  "checks": [
+    "All six SQL analysis queries executed",
+    "Foreign keys valid",
+    "Revenue and profit reconcile",
+    "Order IDs unique across customers and dates"
+  ]
+}
